@@ -1,0 +1,17 @@
+{
+  "name": "sistema-01-urna-autentica",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simulação educacional local de votação com persistência atômica",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^4.22.2"
+  }
+}

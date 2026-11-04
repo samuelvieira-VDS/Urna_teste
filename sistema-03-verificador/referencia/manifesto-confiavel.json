@@ -1,0 +1,16 @@
+{
+  "versao": 1,
+  "algoritmo": "sha256",
+  "geradoEm": "2026-11-04T18:02:11.538Z",
+  "hashAgregado": "72817238fe7f732a87b296cfb2c7416b8b66feb7d71a735344a2d7ca79921c5a",
+  "arquivos": {
+    "package-lock.json": "29285535092e4995cf95371fcb586d2c9432afd90ee4f1124917494c9702dc4f",
+    "package.json": "b6a87e51d6a96c048d81e9e704acd9def9f6f385e592edd2ccc48d0a1299a39a",
+    "public/app.js": "2a3b119f4eae7240313f9d3eb6c60e047e0d1f499a7e6e55dcb56c7c3a6b2408",
+    "public/index.html": "d2378756833a8bcefc7f74a384417fab9317bb7795f6c14b505e25061c3c7d30",
+    "public/style.css": "bca9a187df742e5688cb177022e56b61f21e115dfeadf6d33640b51792fc58f3",
+    "server.js": "2dd337757f74f7f2068e57c7beb71b47b169f1c07adad024505e4247316df24c",
+    "src/armazenamento.js": "beaf971b4b85875a6a3d11e0cd63257748697dcb5f2d3ea3f2f64a5136fe800b",
+    "src/votacao.js": "cf6f895ba9e127ef5b110a62a370ea27c9b903f2fb3beeae6163224412c92887"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "sistema-03-verificador",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Verificador educacional de integridade de c\u00f3digo por SHA-256",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "gerar-referencia": "node cli.js gerar-referencia",
+    "verificar": "node cli.js verificar",
+    "test": "node --test",
+    "start": "node server.js"
+  }
+}

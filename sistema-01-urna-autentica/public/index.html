@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urna de demonstração</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body><main>
+<p class="aviso">Simulação educacional — não é uma eleição real</p>
+<h1>Urna de demonstração</h1>
+<p>Escolha uma opção e confirme seu voto fictício. Você pode votar várias vezes nesta demonstração, sem identificação de eleitor.</p>
+<p id="situacao">Carregando a urna…</p>
+<form id="formulario">
+<fieldset id="opcoes" disabled><legend>Selecione um candidato</legend>
+<label><input type="radio" name="candidatoId" value="flavio_bolsonaro" required> Flávio Bolsonaro</label>
+<label><input type="radio" name="candidatoId" value="lula" required> Lula</label>
+</fieldset><button id="confirmar" type="submit" disabled>Confirmar voto</button></form>
+<div class="acoes"><button id="encerrar" type="button" disabled>Encerrar votação</button><button id="verResultado" type="button" hidden>Ver resultado</button></div>
+<p id="mensagem" role="status" aria-live="polite" aria-atomic="true"></p>
+<section id="resultado" aria-labelledby="tituloResultado" hidden>
+<h2 id="tituloResultado">Resultado da demonstração</h2>
+<div class="tabela"><table><caption>Apuração dos votos fictícios persistidos</caption>
+<thead><tr><th scope="col">Candidato</th><th scope="col">Votos</th><th scope="col">Porcentagem</th></tr></thead><tbody id="apuracao"></tbody></table></div>
+<p id="total"></p><p id="conclusao"></p></section>
+<noscript>Ative o JavaScript para utilizar esta demonstração.</noscript>
+</main></body></html>

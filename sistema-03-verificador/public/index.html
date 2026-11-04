@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema de Verificação de Autenticidade</title>
+  <link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body>
+<header><div class="marca" aria-hidden="true">✓</div><span>LABORATÓRIO DE INTEGRIDADE</span><span class="local">Processamento local · SHA-256</span></header>
+<main>
+  <p class="sobretitulo">COMPARE AS VERSÕES</p>
+  <h1>Sistema de Verificação de Autenticidade</h1>
+  <p class="introducao">Selecione as pastas das duas urnas. Vamos comparar os arquivos de código com a referência confiável já estabelecida.</p>
+  <form id="formulario">
+    <div class="selecao">
+      <section class="cartao"><span class="numero">01</span><h2>Sistema 1 — Urna Autêntica</h2>
+        <p>Selecione a pasta completa do primeiro sistema.</p>
+        <label for="primeiro">Pasta do Sistema 1</label>
+        <input id="primeiro" type="file" webkitdirectory multiple required aria-describedby="resumoPrimeiro">
+        <p id="resumoPrimeiro" class="resumo">Nenhuma pasta selecionada.</p>
+      </section>
+      <section class="cartao"><span class="numero">02</span><h2>Sistema 2 — Urna Adulterada</h2>
+        <p>Selecione a pasta completa do segundo sistema.</p>
+        <label for="segundo">Pasta do Sistema 2</label>
+        <input id="segundo" type="file" webkitdirectory multiple required aria-describedby="resumoSegundo">
+        <p id="resumoSegundo" class="resumo">Nenhuma pasta selecionada.</p>
+      </section>
+    </div>
+    <p class="ajuda">Selecione a raiz de cada projeto, onde está o <code>package.json</code>. Dados de votos, testes, dependências e documentação são excluídos da análise.</p>
+    <div class="barra"><button id="verificar" type="submit" disabled>Verificar Autenticidade</button><p id="limites">Carregando configuração…</p></div>
+  </form>
+  <p id="mensagem" class="mensagem inconclusivo" role="status" aria-live="polite" aria-atomic="true">Preparando a verificação.</p>
+  <section id="resultados" hidden aria-labelledby="tituloResultados">
+    <div class="cabecalhoResultado"><div><p class="sobretitulo">RELATÓRIO DA ANÁLISE</p><h2 id="tituloResultados">Resultado da verificação</h2><p id="dataVerificacao"></p></div><button id="baixar" class="secundario" type="button" disabled>Baixar Relatório</button></div>
+    <p id="conclusao" class="conclusao"></p>
+    <div class="referencia"><strong>SHA-256 agregado da referência confiável</strong><code id="hashReferencia"></code></div>
+    <div id="paineis" class="paineis"></div>
+  </section>
+  <aside><strong>Integridade não é prova de legitimidade.</strong><p>Hashes iguais mostram correspondência com o manifesto confiável. Diferenças indicam alterações que precisam ser analisadas; não comprovam fraude. Os votos salvos não são verificados.</p><p>A referência é mantida no servidor e não pode ser substituída pelos arquivos selecionados.</p></aside>
+  <footer>Simulação educacional — não é uma eleição real.</footer>
+  <noscript>Ative o JavaScript no navegador para selecionar as pastas e realizar a verificação.</noscript>
+</main>
+</body>
+</html>
